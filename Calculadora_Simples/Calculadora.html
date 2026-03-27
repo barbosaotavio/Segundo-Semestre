@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora em JavaScript
+    </title>
+</head>
+<body>
+        <form>
+
+            <label> Valor A</label>
+            <input type="Number" id="v1">
+            <label> Valor de B</label>
+            <input type="Number" id="v2">
+            <label>Operação</label>
+
+            <select id="oper">
+                <option>Soma</option>
+                <option>Subtração</option>
+                <option>Multiplicação</option>
+                <option>Divisão</option>
+                <option>Potência</option>
+            </select>
+
+            <a href="#" onclick="executar()">Executar</a>
+
+        </form>
+        <div id="resp">O resultado aparece aqui</div>
+        <script src="ROT_MOD1-NC3.js"></script>
+        
+        <script>
+            const executar = () =>{
+                const a = eval(document.getElementById(v1).value);
+                const b = eval(document.getElementById(v2).value);
+                let oper = eval(document.getElementById(oper).selectdIndex);
+                let resultado = (oper==0) ? somar(a,b): 
+                (oper==1) ? subtrair(a,b):
+                (oper==2) ? multiplicar(a,b):
+                (oper==3) ? dividir(a,b): 
+                exponencial(a,b); document.getElementById("resp").innerHTML = `Oresultado da Operação é ${resultado}`;
+
+            }
+        </script>
+</body>
+</html>
