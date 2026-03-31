@@ -4,6 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora em JavaScript</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #4facfe, #00f2fe);
+        display: flex;
+        flex-direction: column; /* permite organizar form + resultado verticalmente */
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        gap: 20px; /* espaço entre form e resultado */
+    }
+
+    form {
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 250px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input, select {
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+
+    button {
+        margin-top: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: #4facfe;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #007bff;
+    }
+
+    /* Resultado fora do formulario */
+    #resp {
+        padding: 15px 25px;
+        background: rgba(0,0,0,0.2);
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        min-width: 250px;
+        text-align: center;
+    }
+</style>
+
 </head>
 <body>
 
@@ -28,7 +92,8 @@
 
     <div id="resp">O resultado aparece aqui</div>
 
-    // Importação das funções no arquivojs.
+        <!-- Importação das funções JS. -->
+
     <script src="Arquivo.js"></script>
 
     <script>
@@ -39,8 +104,8 @@
 
             let resultado;
 
-            // Aqui usei if e else para o seletor.
-
+            // Aqui usei if e else para o seletor para as operções.
+            
             if (oper === 0) resultado = somar(a, b);
             else if (oper === 1) resultado = subtrair(a, b);
             else if (oper === 2) resultado = multiplicar(a, b);
