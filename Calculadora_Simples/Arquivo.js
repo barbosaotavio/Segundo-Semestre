@@ -2,7 +2,7 @@ function somar(a,b){
     return a+b
 };
 
-function subitrair(a,b){
+function subtrair(a,b){
     return a-b
 };
 
