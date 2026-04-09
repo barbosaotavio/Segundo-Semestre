@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else</title>
+</head>
+<body>
+    <h2>Estrutura if else if</h2>
+    <p>Modificar o cumprimento de acordo com a hora do dia</p>
+    <p id="demo">Que horas são?</p>
+    <script>
+        let painel = document.getElementById("demo");
+        let hora = new Date().getHours();
+        if(hora < 12){
+            painel.innerHTML = "Bom Dia"
+        } else if(hora < 18){
+            painel.innerHTML = "Boa Tarde"
+        } else {
+            painel.innerHTML = "Boa Noite"
+        }
+    </script>
+</body>
+</html>
