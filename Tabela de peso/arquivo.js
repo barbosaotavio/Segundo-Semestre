@@ -11,5 +11,5 @@ const situacao = (valor_imc) => {
     else if (valor_imc < 40)
         return "Obesidade de grau 2(Severa)!"
     else 
-        return "Obesidade de grau 3(Mórbita)!"
+        return "Obesidade de grau 3(Mórbida)!"
 }

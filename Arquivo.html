@@ -6,11 +6,22 @@
     <title>Tabela de peso</title>
 </head>
 <body>
-    <h1> Clculador de IMC </h1>
+    <h1> Calculador de IMC </h1>
     <form>
         <label>Peso (Kg)</label> <input type="number" id="v1">
         <label>altura(M)</label> <input type="number" id="v2">
+        <a href="#" onclick="Executar"></a>
     </form>
     <script src="Tabela de peso/arquivo.js"></script>
+    <script>
+        const Executar = () => {
+            const peso = eval(document.getElementById("v1").value);
+            const altura = eval(document.getElementById("v2").value);
+            const v_imc = imc(peso,altura);
+            const v_sit = situacao(v_imc);
+            alert(`IMC:${v_imc.toFixed(2)} :: Situção:${v_sit}`);
+
+        }
+    </script>
 </body>
 </html>
